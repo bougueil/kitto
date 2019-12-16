@@ -34,17 +34,18 @@ defmodule Kitto.Mixfile do
   end
 
   defp deps do
-    [{:cowboy, "~> 1.0.0"},
-     {:plug, "~> 1.3.2"},
-     {:poison, "~> 3.0"},
-     {:fs, "~> 2.12.0"},
-     {:httpoison, "~> 0.11.1"},
-     {:ex_doc, "~> 0.14", only: :dev},
-     {:dialyxir, "~> 0.5", only: :dev, runtime: false},
-     {:credo, "~> 0.9", only: [:dev, :test]},
-     {:mock, "~> 0.2", only: :test},
-     {:excoveralls, "~> 0.5", only: :test},
-     {:inch_ex, "~> 0.5", only: :docs}]
+    [{:cowboy, "~> 2.7"},
+     {:plug_cowboy, "~> 2.1"},
+     {:plug, "~> 1.8"},
+     {:poison, "~> 4.0"},
+     {:fs, "~> 4.10"},
+     {:httpoison, "~> 1.6"},
+     {:ex_doc, "~> 0.21.2", only: :dev},
+     {:dialyxir, "~> 0.5.1", only: :dev, runtime: false},
+     {:credo, "~> 1.1.5", only: [:dev, :test]},
+     {:mock, "~> 0.3.4", only: :test},
+     {:excoveralls, "~> 0.12.1", only: :test},
+     {:inch_ex, "~> 2.0", only: :docs}]
   end
 
   defp description, do: "Framework for creating interactive dashboards"
